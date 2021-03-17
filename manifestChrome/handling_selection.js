@@ -13,22 +13,22 @@ document.addEventListener("keydown", function onPress(e){
 		getSelectionText();
 	}
 	
-	if(e.ctrlKey && e.keyCode == 190){
+	if(e.ctrlKey && e.shiftKey){
 		showAnswers();
 	}
 	
-	if(e.ctrlKey && e.keyCode == 188){
+	if(e.ctrlKey && e.altKey){
 		hideAnswers();
 	}
 	
 });
 
 function initMap(){
-	targetHTMLel = document.getElementsByTagName("footer");
+	targetHTMLel = document.getElementsByTagName("header");
 	if(targetHTMLel.length == 0){
-		targetHTMLel = document.getElementsByTagName("header")[0];
-	}else{
 		targetHTMLel = document.getElementsByTagName("footer")[0];
+	}else{
+		targetHTMLel = document.getElementsByTagName("header")[0];
 	}
 	
 	answers.set(["за", "какое", "количество", "обращений", "к", "диску", "можно", "найти", "запись", "в", "файле", "с", "организацией", "в", "виде", "в-дерева", "", "если", "известно", "что"],'За какое количество обращений к диску можно найти запись в файле с организацией в виде "В-дерева", если: основной файл состоит из n = 70 000 записей, блок основного файла содержит е = 7 записей, блок индексного файла содержит d = 10 записей | 4');
